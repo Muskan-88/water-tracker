@@ -52,3 +52,21 @@ def set_goal():
         else:
             print("Please enter a valid number greater than zero!")
 
+while True:
+    print("\n~~~~~~~~~~Water Tracker~~~~~~~~~~\n")
+    print(f"Today's total: {data[today]} cup(s)")
+    print(f"Daily goal: {data['goal']} cup(s)")
+    print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+    print("Options:")
+    print("1. Add water")
+    print("2. Reset total")
+    print("3. View progress")
+    print("4. Set daily goal")
+    print("5. Quit\n")
+
+    while True:
+        choice = input("Enter your choice (1-5): ")
+        if choice.isdigit() and 0 < int(choice) < 6:
+            break
+        else:
+            print("Please enter a valid number between 1-5!")
